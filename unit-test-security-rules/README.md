@@ -10,12 +10,6 @@ You will also need the [Firebase CLI](https://firebase.google.com/docs/cli).
 
 ## Run
 
-To run the Realtime Database tests:
-
-```
-firebase emulators:exec --only database "npm run test-database"
-```
-
 To run the Cloud Firestore tests:
 
 ```

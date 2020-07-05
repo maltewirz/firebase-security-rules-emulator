@@ -2,14 +2,17 @@
   "name": "unit-test-security-rules",
   "version": "1.0.0",
   "scripts": {
-    "test-database": "mocha test/database.spec.js",
-    "test-firestore": "mocha test/firestore.spec.js",
-    "test": "mocha test/*.spec.js"
+    "test": "jest test/firestore.spec.js --watch --runInBand --detectOpenHandles",
+    "emu": "firebase emulators:start --only firestore",
+    "version": "firebase --version"
   },
   "license": "Apache-2.0",
   "devDependencies": {
     "@firebase/testing": "^0.20.5",
     "firebase-tools": "^8.4.3",
-    "mocha": "^8.0.1"
+    "jest": "^26.1.0"  
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
